@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (setupCommandBar) {
-      window.CommandBar.addRouter(push);
       window.CommandBar.addCommand({
         name: "Home",
         text: "Home",
@@ -34,7 +33,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       });
       setSetupCommandBar(false);
     }
-  }, [setupCommandBar, push]);
+  }, [setupCommandBar]);
+
+  useEffect(() => {
+    window.CommandBar.addRouter(push);
+  }, [push]);
 
   return <Component {...pageProps} />;
 }
