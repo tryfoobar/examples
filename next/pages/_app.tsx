@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       setCommandBarReady(true);
     });
 
-    return window.CommandBar.shutdown();
+    return window.CommandBar.shutdown;
   }, []);
 
   useEffect(() => {
