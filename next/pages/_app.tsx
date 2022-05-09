@@ -9,16 +9,18 @@ if (typeof window !== "undefined") {
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { push } = useRouter();
-  const [setupCommandBar, setSetupCommandBar] = useState(false);
+  const [commandBarReady, setCommandBarReady] = useState(false);
 
   useEffect(() => {
     window.CommandBar.boot("me").then(() => {
-      setSetupCommandBar(true);
+      setCommandBarReady(true);
     });
+
+    return window.CommandBar.shutdown();
   }, []);
 
   useEffect(() => {
-    if (setupCommandBar) {
+    if (commandBarReady) {
       window.CommandBar.addCommand({
         name: "Home",
         text: "Home",
@@ -31,13 +33,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         category: "Navigation",
         template: { type: "link", value: "/fop", operation: "router" },
       });
-      setSetupCommandBar(false);
     }
-  }, [setupCommandBar]);
+  }, [commandBarReady]);
 
   useEffect(() => {
-    window.CommandBar.addRouter(push);
-  }, [push]);
+    if (commandBarReady) {
+      window.CommandBar.addRouter(push);
+    }
+  }, [push, commandBarReady]);
 
   return <Component {...pageProps} />;
 }
