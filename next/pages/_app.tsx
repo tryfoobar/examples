@@ -3,6 +3,11 @@ import { useRouter } from "next/router";
 import type { AppProps } from "next/app";
 import { init } from "commandbar";
 
+import Layout from "../components/Layout";
+import { CrudProvider } from "../components/CrudProvider";
+
+import "../global.css";
+
 if (typeof window !== "undefined") {
   init("5ba0a816");
 }
@@ -22,17 +27,38 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (commandBarReady) {
       window.CommandBar.addCommand({
-        name: "Home",
-        text: "Home",
+        name: "home",
+        text: "Go to Home",
         category: "Navigation",
+        icon: "https://openmoji.org/data/color/svg/E269.svg",
         template: { type: "link", value: "/", operation: "router" },
+        availability_rules: [
+          {
+            type: "url",
+            operator: "isNot",
+            value: "/",
+          },
+        ],
       });
       window.CommandBar.addCommand({
-        name: "Fop",
-        text: "Fop",
+        name: "foo",
+        text: "Go to Foo",
         category: "Navigation",
-        template: { type: "link", value: "/fop", operation: "router" },
+        icon: "https://openmoji.org/data/color/svg/E269.svg",
+        template: { type: "link", value: "/foo", operation: "router" },
+        availability_rules: [
+          {
+            type: "url",
+            operator: "isNot",
+            value: "/foo",
+          },
+        ],
       });
+
+      return () => {
+        window.CommandBar.removeCommand("home");
+        window.CommandBar.removeCommand("foo");
+      };
     }
   }, [commandBarReady]);
 
@@ -42,7 +68,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [push, commandBarReady]);
 
-  return <Component {...pageProps} />;
+  return (
+    <CrudProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </CrudProvider>
+  );
 }
 
 export default MyApp;

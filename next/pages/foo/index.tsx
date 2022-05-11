@@ -1,6 +1,6 @@
 const Fop = () => (
   <main>
-    <h1>Fop</h1>
+    <h1>Foo</h1>
   </main>
 );
 
