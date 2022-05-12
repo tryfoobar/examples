@@ -1,0 +1,31 @@
+<main [formGroup]="crudForm">
+  <input placeholder="filter prefix" formControlName="prefix" />
+  <select formControlName="index" size="5">
+    <option
+      *ngFor="let person of filteredPeople$ | async; let i = index"
+      value="{{ i }}"
+    >
+      {{ person.last }}, {{ person.first }}
+    </option>
+  </select>
+
+  <label>
+    <input formControlName="first" placeholder="first" />
+  </label>
+  <label>
+    <input formControlName="last" placeholder="last" />
+  </label>
+
+  <div class="buttons">
+    <button (click)="create()" [disabled]="!first?.value || !last?.value">
+      create
+    </button>
+    <button
+      (click)="update()"
+      [disabled]="!first?.value || !last?.value || !(selected$ | async)"
+    >
+      update
+    </button>
+    <button (click)="remove()" [disabled]="!(selected$ | async)">delete</button>
+  </div>
+</main>

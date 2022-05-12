@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommandbarService } from './commandbar.service';
+import { CommandbarService } from './commandbar/commandbar.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,6 @@ import { CommandbarService } from './commandbar.service';
 })
 export class AppComponent {
   constructor(private readonly commandbarService: CommandbarService) {
-    this.commandbarService.ngOnInit();
+    this.commandbarService.setup();
   }
 }
