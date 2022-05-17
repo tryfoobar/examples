@@ -32,7 +32,7 @@ Example repos scaffolded using:
 
 ## Screenshots
 
-![App Screenshot](https://share.cleanshot.com/A6rSCQ)
+<img width="913" alt="CleanShot 2022-05-17 at 10 59 14@2x" src="https://user-images.githubusercontent.com/10150898/168879502-9ce52bda-d93d-4190-a644-8eb5657f6dae.png">
 
 ## Acknowledgements
 
