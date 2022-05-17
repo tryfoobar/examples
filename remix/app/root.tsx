@@ -113,16 +113,32 @@ export default function App() {
 
   useEffect(() => {
     void window.CommandBar.addCommand({
-      name: "Home",
-      text: "Home",
+      name: "home",
+      text: "Go to Home",
       category: "Navigation",
+      icon: "https://openmoji.org/data/color/svg/E269.svg",
       template: { type: "link", value: "/", operation: "router" },
+      availability_rules: [
+        {
+          type: "url",
+          operator: "isNot",
+          value: "/",
+        },
+      ],
     });
     void window.CommandBar.addCommand({
-      name: "Foo",
-      text: "Foo",
+      name: "foo",
+      text: "Go to Foo",
       category: "Navigation",
+      icon: "https://openmoji.org/data/color/svg/E269.svg",
       template: { type: "link", value: "/foo", operation: "router" },
+      availability_rules: [
+        {
+          type: "url",
+          operator: "isNot",
+          value: "/foo",
+        },
+      ],
     });
 
     void window.CommandBar.addCommand({
