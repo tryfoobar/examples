@@ -8,6 +8,8 @@ This minimal app showcases adding searchable context, commands that can be execu
 
 ## Demo
 
+![CleanShot 2022-05-17 at 11 01 31](https://user-images.githubusercontent.com/10150898/168879979-3cd8e8d0-cc98-4673-97a9-9b82a62a73e8.gif)
+
 ## Features
 
 - All actions can be completed in UI and CommandBar
@@ -32,7 +34,7 @@ Example repos scaffolded using:
 
 ## Screenshots
 
-![App Screenshot](https://share.cleanshot.com/A6rSCQ)
+<img width="913" alt="CleanShot 2022-05-17 at 10 59 14@2x" src="https://user-images.githubusercontent.com/10150898/168879502-9ce52bda-d93d-4190-a644-8eb5657f6dae.png">
 
 ## Acknowledgements
 
