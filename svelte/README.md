@@ -24,13 +24,13 @@ Install the dependencies...
 
 ```bash
 cd svelte-app
-npm install
+yarn
 ```
 
 ...then start [Rollup](https://rollupjs.org):
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
@@ -44,10 +44,10 @@ If you're using [Visual Studio Code](https://code.visualstudio.com/) we recommen
 To create an optimised version of the app:
 
 ```bash
-npm run build
+yarn build
 ```
 
-You can run the newly built app with `npm run start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
+You can run the newly built app with `yarn start`. This uses [sirv](https://github.com/lukeed/sirv), which is included in your package.json's `dependencies` so that the app will work when you deploy to platforms like [Heroku](https://heroku.com).
 
 
 ## Single-page app mode
@@ -83,7 +83,7 @@ If you want to use `baseUrl` or `path` aliases within your `tsconfig`, you need 
 Install `vercel` if you haven't already:
 
 ```bash
-npm install -g vercel
+yarn add -g vercel
 ```
 
 Then, from within your project folder:
@@ -98,12 +98,12 @@ vercel deploy --name my-project
 Install `surge` if you haven't already:
 
 ```bash
-npm install -g surge
+yarn add -g surge
 ```
 
 Then, from within your project folder:
 
 ```bash
-npm run build
+yarn build
 surge public my-project.surge.sh
 ```
