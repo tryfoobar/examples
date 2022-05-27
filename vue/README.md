@@ -1,25 +1,31 @@
 # vue
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the Vue version of the 7GUIs CRUD implementation with CommandBar.
 
-## Recommended IDE Setup
+The app used is a basic CRUD app based on
+the [7GUIs CRUD spec](https://eugenkiss.github.io/7guis/tasks#crud) plus 1
+additional route.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+The app is setup so that all actions are available globally and can be 
+dispatched by CommandBar. 
 
-## Type Support for `.vue` Imports in TS
+- `App.vue`: all CommandBar logic is located here
+- `store.ts`: the app data and methods for updating state are here
+- `views/HomeView.vue`: logic for manipulating and viewing app state 
+- `views/FooView.vue`: a simple view to help demonstrate routing with CommandBar
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Demo
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+![CleanShot 2022-05-17 at 11 01 31](https://user-images.githubusercontent.com/10150898/168879979-3cd8e8d0-cc98-4673-97a9-9b82a62a73e8.gif)
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## Features
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- All actions can be completed in UI and CommandBar
+- Everything in CommandBar is done
+  with [the SDK](https://www.commandbar.com/sdk)
+- A router is used to prevent page reload
+- All CRUD actions can be completed from any point in the app
+- 2 routes to navigate between: "/" and "/foo"
 
 ## Project Setup
 
@@ -44,3 +50,13 @@ yarn build
 ```sh
 yarn lint
 ```
+
+## Screenshots
+
+<img width="913" alt="CleanShot 2022-05-17 at 10 59 14@2x" src="https://user-images.githubusercontent.com/10150898/168879502-9ce52bda-d93d-4190-a644-8eb5657f6dae.png">
+
+## Documentation
+
+[CommandBar Documentation](https://www.commandbar.com/docs)
+
+[CommandBar SDK Documentation](https://www.commandbar.com/sdk)
