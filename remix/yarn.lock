@@ -1712,13 +1712,21 @@ comma-separated-tokens@^2.0.0:
   resolved "https://registry.yarnpkg.com/comma-separated-tokens/-/comma-separated-tokens-2.0.2.tgz#d4c25abb679b7751c880be623c1179780fe1dd98"
   integrity sha512-G5yTt3KQN4Yn7Yk4ed73hlZ1evrFKXeUW3086p3PRFNp7m2vIjI6Pg+Kgb+oyzhd9F2qdcoj67+y3SdxL5XWsg==
 
-commandbar@^1.6.6:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/commandbar/-/commandbar-1.6.6.tgz#6f0d51e9313ccb44322ab1f742b84e2903d589b0"
-  integrity sha512-o0oIsCg/1kwig9qKt/N/DViIVNBukS3leXbt/6n38pwdD/zwKD6XsGNhnCSJs6XnHYO2byn6YtfSzNzFYiUm+w==
+commandbar-launcher@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/commandbar-launcher/-/commandbar-launcher-1.1.9.tgz#67b66a0e5be111001591aae2a7cadf6579d152d4"
+  integrity sha512-sumGhBp0B7dEL+kCtXgPtAUF12u1znmE0HI3jkcugxFZnznQWdhs8N7snrc1abMsYjtlBjoDH/WuD7uZYXvUdA==
   dependencies:
+    react-icons "^3.11.0"
+
+commandbar@^1.7.3:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/commandbar/-/commandbar-1.7.3.tgz#37c7bb1c4b7adbe0b886537a0ed33932552d241a"
+  integrity sha512-Mx9tsUsC47S/wHrf4oNTkqBfAWpRIi/LVQPqREwnyCqfdmsfOrrsANXMXoL/yTPbtRMcOe6DB4vqfKUYVN31dA==
+  dependencies:
+    commandbar-launcher "^1.1.9"
     fp-ts "2.10.5"
-    io-ts "2.2.13"
+    io-ts "^2.2.14"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -3535,10 +3543,10 @@ internal-slot@^1.0.3:
     has "^1.0.3"
     side-channel "^1.0.4"
 
-io-ts@2.2.13:
-  version "2.2.13"
-  resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.13.tgz#e04016685e863dd5cffb2b5262c5c9c74432dfda"
-  integrity sha512-BYJgE/BanovJKDvCnAkrr7f3gTucSyk+Sr5VtpouBO1/YfBKUyIn2z1ODG8LEF+1D4sjKZ3Bd/A5/v8JrJe5UQ==
+io-ts@^2.2.14:
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/io-ts/-/io-ts-2.2.20.tgz#be42b75f6668a2c44f706f72ee6e4c906777c7f5"
+  integrity sha512-Rq2BsYmtwS5vVttie4rqrOCIfHCS9TgpRLFpKQCM1wZBBRY9nWVGmEvm2FnDbSE2un1UE39DvFpTR5UL47YDcA==
 
 ipaddr.js@1.9.1:
   version "1.9.1"
@@ -5359,6 +5367,13 @@ react-dom@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     scheduler "^0.20.2"
+
+react-icons@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
+  integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
+  dependencies:
+    camelcase "^5.0.0"
 
 react-is@^16.13.1:
   version "16.13.1"
