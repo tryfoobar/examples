@@ -84,7 +84,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    window.CommandBar.addContext(
+    window.CommandBar.addRecords(
       "people",
       () =>
         people.map(({ first, last }, id) => ({
@@ -93,9 +93,6 @@ export default function App() {
           first,
           last,
         })),
-      {
-        quickFindOptions: { quickFind: true },
-      }
     );
   }, [people]);
 
